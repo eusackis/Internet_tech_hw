@@ -1,0 +1,15 @@
+:root {
+    background-color: #778da9;
+    color: #e0e1dd;
+
+}
+
+nav {
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    /* border-bottom: 2px solid #415a77; */
+    align-items: center;
+    justify-content: center;
+    background-color: #415a77;
+}
