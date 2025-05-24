@@ -22,6 +22,7 @@ ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
+  color: white;
 }
 
 ol,
@@ -100,6 +101,17 @@ a {
   width: fit-content;
   margin-right: auto;
   font-size: 42px;
+
+}
+
+@media screen and (max-width: 510px) {
+  #logo {
+    font-size: 25px;
+  }
+
+  .nav_navlink {
+    font-size: 14px;
+  }
 }
 
 nav {
@@ -112,6 +124,9 @@ nav {
   align-items: center;
   justify-content: center;
   background-color: black;
+  transition: transform 0.8s ease;
+  top: 0;
+  width: 100%;
 }
 
 #nav_links {
@@ -201,7 +216,18 @@ section#bands {
 }
 
 footer {
-  color: black;
+  box-shadow: 4px 4px 10px black;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: black;
+  }
+
   background: white;
   width: 100%;
   bottom: 0;
@@ -216,6 +242,7 @@ footer {
 
 /* Sign up page */
 section#sign-up {
+  background: black;
   min-height: 100svh;
   display: flex;
   justify-content: center;
@@ -250,51 +277,64 @@ section#sign-up {
 
 #band {
   min-height: 100svh;
+}
 
+section#banner-section {
+  min-height: 50svh;
+}
 
-  section#banner-section {
-    min-height: 50svh;
+img#banner {
+  width: 100%;
+  height: 400px;
+  background-image: url('./files/knocked_loose_promo-01-2019_credit_tim_caymen-2048x1151.jpg');
+  background-repeat: no-repeat;
+  background-position: center 20%;
+  background-size: cover;
+  object-fit: cover;
+}
 
-    img#banner {
-      width: 100%;
-      height: 400px;
-      background-image: url('./files/knocked_loose_promo-01-2019_credit_tim_caymen-2048x1151.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center 20%;
-    }
-  }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
 
+.grid article {
+  background: white;
+  color: black;
+  text-align: center;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: #00000030 0px 5px 15px;
+}
+
+.grid article a {
+  color: black;
+}
+
+.grid article img {
+  margin: auto;
+  display: block;
+}
+
+@media (max-width: 500px) {
   .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-
-    article {
-      background: white;
-      color: black;
-      text-align: center;
-      padding: 16px;
-      border-radius: 16px;
-      box-shadow: #00000030 0px 5px 15px;
-
-      a {
-        color: black;
-      }
-
-      img {
-        margin: auto;
-        display: block;
-      }
-    }
+    grid-template-columns: 1fr;
   }
 }
 
+
+
 #merch {
   padding-bottom: 4rem;
+
   #merch-title {
     font-size: 35px;
     margin: 1rem 0;
 
   }
 }
+
+
+
+/* Homework 2 ? */
