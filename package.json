@@ -1,0 +1,22 @@
+{
+  "name": "internet_tech_hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eusackis/Internet_tech_hw.git"
+  },
+  "author": "Edvards Usackis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eusackis/Internet_tech_hw/issues"
+  },
+  "homepage": "https://github.com/eusackis/Internet_tech_hw#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
