@@ -1,55 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/common.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Pirata+One&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/common.css" />
   <title>MerchBase</title>
 </head>
 
 <body>
   <header>
-    <h1>MerchBase</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#bands">Bands</a></li>
-        <li><a href="#">Cart</a></li>
-        <li><a href="signup.html">Sign up</a></li>
+      <h1 id="logo" class="pirata-one-regular">MerchBase</h1>
+      <ul id="nav_links" class="">
+        <li><a class="nav_navlink active" href="index.html">Home</a></li>
+        <li><a class="nav_navlink" href="#bands">Bands</a></li>
+        <li><a class="nav_navlink" href="#">Cart</a></li>
+        <li><a class="nav_navlink" href="signup.html">Sign up</a></li>
       </ul>
-      <form action="#" method="post" style="display: inline;">
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit" value="Login">
-      </form>
     </nav>
   </header>
 
   <main>
-    <section id="bands">
-      <h2>Featured Bands</h2>
-      <ul>
-        <li><img src="../files/knocked_loose_promo-01-2019_credit_tim_caymen-2048x1151.jpg"
-            alt="Knocked Loose"><br>Knocked Loose</li>
-        <li><img src="../files/TAIM.jpg" alt="Thy Art is Murder"><br>Thy Art is Murder</li>
-        <li><img src="../files/Converge-by-Reid-Haithcock_2019-Andere.jpg" alt="Converge"><br>Converge</li>
-        <li><img src="../files/TF12.jpg" alt="Title Fight"><br>Title Fight</li>
-        <li><a href="deftones.html"><img src="../files/def.jpg" alt="Deftones"><br>Deftones</a></li>
-        <li><img src="../files/The-Story-So-Far-by-Abbie-Shipperley-NME-696x442.jpg" alt="The Story So Far"><br>The
-          Story So
-          Far</li>
-      </ul>
+    <section id="hero">
+      <div id="hero_text" class="">
+        <h2 class="hero_title">Band Merch Made Easy</h2>
+        <h3 class="hero_subtitle">
+          Discover official gear from your favorite bands — all in one place.
+        </h3>
+      </div>
     </section>
 
-    <section>
-      <h2>About This Site</h2>
-      <p>This site showcases top heavy and alternative bands with featured merch.</p>
+    <section id="bands">
+      <h2 class="bands_title">Featured Bands</h2>
+      <table>
+        <tr>
+          <td>
+            <img alt="Knocked Loose" src="./files/knocked_loose_promo-01-2019_credit_tim_caymen-2048x1151.jpg" alt=""
+              width="200" />
+            <div class="hover-text">Knocked Loose</div>
+          </td>
+          <td>
+            <img alt="Thy Art is Murder" src="./files/TAIM.jpg" alt="" width="200" />
+            <div class="hover-text">Thy Art is Murder</div>
+          </td>
+          <td>
+            <img alt="Converge" src="./files/Converge-by-Reid-Haithcock_2019-Andere.jpg" alt="" width="200" />
+            <div class="hover-text">Converge</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img alt="Title Fight" src="./files/TF12.jpg" alt="" width="200" />
+            <div class="hover-text">Title Fight</div>
+          </td>
+          <td>
+            <a href="deftones.html">
+              <img alt="Deftones" src="./files/def.jpg" alt="" width="200" />
+              <div class="hover-text">Deftones</div>
+            </a>
+          </td>
+          <td>
+            <img alt="The Story so far" src="./files/The-Story-So-Far-by-Abbie-Shipperley-NME-696x442.jpg" alt=""
+              width="200" />
+            <div class="hover-text">The Story so far</div>
+          </td>
+        </tr>
+      </table>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 MerchBase</p>
+    <div class="footer_textWrapper">
+      <h2>About This Site</h2>
+      <p>
+        This site showcases top heavy and alternative bands with featured
+        merch.
+      </p>
+    </div>
   </footer>
 </body>
 

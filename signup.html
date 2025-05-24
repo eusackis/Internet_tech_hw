@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Pirata+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/common.css" />
+    <title>Sign Up</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <h1 id="logo" class="pirata-one-regular">MerchBase</h1>
+        <ul id="nav_links" class="">
+          <li><a class="nav_navlink" href="index.html">Home</a></li>
+          <li><a class="nav_navlink" href="index.html#bands">Bands</a></li>
+          <li><a class="nav_navlink" href="#">Cart</a></li>
+          <li><a class="nav_navlink active" href="signup.html">Sign up</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id='sign-up'>
+      <form action="/submit-signup" method="post">
+        <h2>Create an Account</h2>
+        <label for="name">Full Name<span class="needed">*</span>: </label>
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="tel">Phone Number:</label>
+        <input type="tel" id="tel" name="tel"  /><br /><br />
+
+        <label for="email">Email <span class="needed">*</span>:</label>
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="password">Password<span class="needed">*</span>:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+        /><br /><br />
+
+        <label for="dob">Date of Birth<span class="needed">*</span>:</label>
+        <input type="date" id="dob" name="dob" /><br /><br />
+
+        <label>
+          <input type="checkbox" name="terms" required /> I agree to the terms
+          and conditions <span class="needed">*</span></label
+        ><br /><br />
+
+        <input type="submit" value="Create Account" />
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 MerchBase</p>
+      <div class="footer_textWrapper">
+        <h2>About This Site</h2>
+        <p>
+          This site showcases top heavy and alternative bands with featured
+          merch.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

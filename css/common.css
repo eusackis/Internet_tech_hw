@@ -1,15 +1,300 @@
-:root {
-    background-color: #778da9;
-    color: #e0e1dd;
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* CSS reset from https://www.digitalocean.com/community/tutorials/css-minimal-css-reset */
+
+/* helper classes */
+.bred {
+  border: 1px solid red;
+}
+
+.bred2 {
+  border: 1px solid blue;
+}
+
+.bred3 {
+  border: 1px solid green;
+}
+
+:root {
+  background-color: #778da9;
+  color: #e0e1dd;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  /* Why doesn't body min-height work, but this does*/
+  section#hero,
+  section#sign-up,
+  main#band {
+    margin-top: 60px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
+p {
+  font-family: sans;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+a {
+  color: white;
+}
+
+.pirata-one-regular {
+  font-family: "Pirata One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#logo {
+  padding-left: 10px;
+  text-align: center;
+  width: fit-content;
+  margin-right: auto;
+  font-size: 42px;
 }
 
 nav {
-    border-radius: 10px;
-    display: flex;
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  height: 60px;
+  padding: 16px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+#nav_links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.nav_navlink {
+  transition:
+    color 0.3s ease-in-out,
+    text-underline-offset 0.3s ease-in-out;
+  color: white;
+  text-underline-offset: 1px;
+
+  &:hover {
+    color: red;
+    text-underline-offset: 5px;
+  }
+
+  &.active {
+    color: pink;
+  }
+}
+
+section#hero {
+  position: relative;
+  min-height: 100svh;
+  background-image: url("../files/knocked_loose_promo-01-2019_credit_tim_caymen-2048x1151.jpg");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+}
+
+#hero_text {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  max-width: 550px;
+  text-shadow: 2px 2px #464545;
+
+  .hero_title {
+    font-size: 40px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+
+  .hero_subtitle {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+section#bands {
+  padding: 4rem 16px;
+  background: black;
+
+  .bands_title {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 2rem 16px;
+  }
+
+  table {
+    margin-top: 2rem;
     width: 100%;
-    /* border-bottom: 2px solid #415a77; */
-    align-items: center;
-    justify-content: center;
-    background-color: #415a77;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  td {
+    width: 33.33%;
+    padding: 5px;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+footer {
+  color: black;
+  background: white;
+  width: 100%;
+  bottom: 0;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+
+  .footer_textWrapper {
+    max-width: 250px;
+  }
+}
+
+/* Sign up page */
+section#sign-up {
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    h2 {
+      font-size: 35px;
+      margin-bottom: 2rem;
+    }
+
+    .needed {
+      color: red;
+    }
+
+    label {
+      color: white;
+    }
+
+    input {
+      padding: 8px 16px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+/* Band pages */
+
+#band {
+  min-height: 100svh;
+
+
+  section#banner-section {
+    min-height: 50svh;
+
+    img#banner {
+      width: 100%;
+      height: 400px;
+      background-image: url('./files/knocked_loose_promo-01-2019_credit_tim_caymen-2048x1151.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center 20%;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+
+    article {
+      background: white;
+      color: black;
+      text-align: center;
+      padding: 16px;
+      border-radius: 16px;
+      box-shadow: #00000030 0px 5px 15px;
+
+      a {
+        color: black;
+      }
+
+      img {
+        margin: auto;
+        display: block;
+      }
+    }
+  }
+}
+
+#merch {
+  padding-bottom: 4rem;
+  #merch-title {
+    font-size: 35px;
+    margin: 1rem 0;
+
+  }
 }

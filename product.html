@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <title>Deftones T-Shirt</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Deftones T-Shirt</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#bands">Bands</a></li>
+          <li><a href="#">Cart</a></li>
+          <li><a href="signup.html">Sign up</a></li>
+        </ul>
+        <form action="#" method="post" style="display: inline">
+          <input type="text" name="username" placeholder="Username" />
+          <input type="password" name="password" placeholder="Password" />
+          <input type="submit" value="Login" />
+        </form>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <img src="shirt.jpg" alt="Deftones T-Shirt" width="200" />
+        <h2>$25.00</h2>
+
+        <form action="/submit-order" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required /><br /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required /><br /><br />
+
+          <label>Size:</label>
+          <input type="radio" name="size" value="S" /> S
+          <input type="radio" name="size" value="M" /> M
+          <input type="radio" name="size" value="L" /> L<br /><br />
+
+          <label for="color">Preferred Color:</label>
+          <input type="text" id="color" name="color" /><br /><br />
+
+          <label>
+            <input type="checkbox" name="agree" required /> I agree to the terms </label
+          ><br /><br />
+
+          <input type="submit" value="Buy Now" />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 MerchBase</p>
+    </footer>
+  </body>
+</html>
